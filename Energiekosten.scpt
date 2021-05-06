@@ -1,6 +1,6 @@
 set WattDerKomponenten to "500" #<- Wattverbrauch der Komponenten
 set Stromkosten to "0,32" #<- Stromkosten in deinem Land
-set Mining to "5" #<- Die Mining Kraft des Rechners
+set Mining to "5,00" #<- Die Mining Kraft des Rechners in Euro
 
 #Bei reiner Berechnung der Stromkosten für Mining=O eingeben
 
