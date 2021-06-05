@@ -1,6 +1,6 @@
-set WattDerKomponenten to "500" #<- Wattverbrauch der Komponenten
-set Stromkosten to "0,32" #<- Stromkosten in deinem Land
-set Mining to "5,00" #<- Die Mining Kraft des Rechners in Euro
+set WattDerKomponenten to "200" #<- Wattverbrauch der Komponenten
+set Stromkosten to "0,31" #<- Stromkosten in deinem Land
+set Mining to "1,80" #<- Die Mining Kraft des Rechners in Euro
 
 #Bei reiner Berechnung der Stromkosten für Mining=O eingeben
 
@@ -18,17 +18,17 @@ set EinWatt to Stromkosten / kwH
 
 set BenutzerWatt to EinWatt * WattDerKomponenten #Stromkosten pro Watt
 
-set B1Stromkosten to BenutzerWatt as string
-set B2Stromkosten to BenutzerWatt * 24 as string
-set B3Stromkosten to BenutzerWatt * 24 * 12 as string
+set B1Stromkosten to BenutzerWatt * 24 as string
+set B2Stromkosten to BenutzerWatt * 24 * 30 as string
+set B3Stromkosten to BenutzerWatt * 24 * 30 * 12 as string
 
 set B1Mining to Mining as string
-set B2Mining to Mining * 24 as string
-set B3Mining to Mining * 24 * 12 as string
+set B2Mining to Mining * 30 as string
+set B3Mining to Mining * 30 * 12 as string
 
-set B1Profit to Mining - BenutzerWatt as string
-set B2Profit to (Mining - BenutzerWatt) * 24 as string
-set B3Profit to (Mining - BenutzerWatt) * 24 * 12 as string
+set B1Profit to Mining - (BenutzerWatt * 24) as string
+set B2Profit to (Mining * 30) - (BenutzerWatt * 24 * 30) as string
+set B3Profit to (Mining * 30 * 12) - (BenutzerWatt * 24 * 30 * 12) as string
 
 set x to "                         " & "Tag" & "     Monat " & "  Jahr " & "                            Watt= " & WattDerKomponenten
 set b123S to space2 & "Stromkosten= " & B1Stromkosten & space & B2Stromkosten & space & B3Stromkosten & " - Euro"
