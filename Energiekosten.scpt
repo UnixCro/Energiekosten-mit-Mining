@@ -1,3 +1,4 @@
+try
 set WattDerKomponenten to "200" #<- Wattverbrauch der Komponenten
 set Stromkosten to "0,31" #<- Stromkosten in deinem Land
 set Mining to "1,80" #<- Die Mining Kraft des Rechners in Euro an einem Tag 
@@ -38,3 +39,4 @@ set b123P to space2 & "Profit=             " & B1Profit & space & B2Profit & spa
 set xxa to x & b123S & b123M & b123P
 
 display dialog xxa buttons {"OK"} with title "Energiekosten" default button 1
+end try
